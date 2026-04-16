@@ -1,21 +1,6 @@
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const pedido = {
-        nome: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        mensagem: document.getElementById('message').value,
-        data: new Date().toLocaleString()
-    };
+// O Formspree cuidará do envio, mas podemos avisar o usuário
+const form = document.getElementById('contact-form');
 
-    // Pega o que já tem salvo ou cria uma lista vazia
-    let pedidosSalvos = JSON.parse(localStorage.getItem('meusPedidos')) || [];
-    
-    // Adiciona o novo pedido
-    pedidosSalvos.push(pedido);
-    
-    // Salva de volta no navegador
-    localStorage.setItem('meusPedidos', JSON.stringify(pedidosSalvos));
-
-    
+form.addEventListener('submit', function() {
+    alert("Enviando sua solicitação... Você receberá uma confirmação por e-mail em instantes.");
 });

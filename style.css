@@ -118,24 +118,58 @@ input, textarea {
     border-radius: 5px;
 }
 
+/* Estilo do Rodapé */
 footer {
     background: #1a1a1a;
     color: #fff;
     text-align: center;
     padding: 20px;
+}
 
-    /* Estilo para a imagem dentro do card */
+/* Estilo do Botão com a flutuação que você pediu */
+.btn {
+    background: #007bff;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Habilita o movimento */
+}
+
+/* Estilo base do botão */
+.btn {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    
+    /* ESSA LINHA É A CHAVE: Faz a animação ser suave */
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+/* O QUE ACONTECE QUANDO PASSA O MOUSE NO BOTÃO */
+.btn:hover {
+    /* Faz o botão subir 10px e girar 0 graus (mais sutil que o ícone) */
+    transform: translateY(-10px);
+    
+    /* Opcional: muda um pouco a cor para dar destaque */
+    background-color: #0056b3; 
+}
+
+/* Estilo do Ícone de Serviço (que você já tinha) */
 .service-icon {
-    width: 60px; /* Tamanho da imagem */
+    width: 60px;
     height: 60px;
     margin-bottom: 20px;
-    /* ESSA LINHA É A CHAVE: Ela diz ao navegador para animar qualquer mudança */
     transition: transform 0.3s ease-in-out;
 }
 
-/* O QUE ACONTECE QUANDO PASSA O MOUSE NO CARD */
 .card:hover .service-icon {
-    /* Faz a imagem subir 10px e girar 5 graus */
     transform: translateY(-10px) rotate(5deg);
-}
 }

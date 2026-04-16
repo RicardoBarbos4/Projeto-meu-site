@@ -48,46 +48,20 @@
 
     
     <section id="contato">
-        <h2>FALE CONOSCO</h2>
-
-        <!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
-<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-<script>
-  /* paste this line in verbatim */
-  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-  /* customize formbutton below*/     
-  formbutton("create", {
-    action: "https://formspree.io/f/xbdqdblo",
-    title: "Como posso ajudar?",
-    fields: [
-      { 
-        type: "email", 
-        label: "Email:", 
-        name: "email",
-        required: true,
-        placeholder: "seu@email.com"
-      },
-      {
-        type: "textarea",
-        label: "Message:",
-        name: "message",
-        placeholder: "Como podemos te ajudar?",
-      },
-      { type: "submit" }      
-    ],
-    styles: {
-      title: {
-        backgroundColor: "blue"
-      },
-      button: {
-        backgroundColor: "blue"
-      }
-    }
-  });
-</script>
+    <h2>Solicitar Orçamento</h2>
+    <p>Deixe seus dados e entraremos em contato em breve.</p>
     
-            
-    </section>
+    <form action="https://formspree.io/f/xbdqdblo" method="POST" id="contact-form">
+        <input type="text" name="nome" placeholder="Seu Nome Completo" required>
+        <input type="email" name="email" placeholder="Seu E-mail" required>
+        
+        <input type="tel" name="whatsapp" placeholder="Seu WhatsApp (com DDD)" required>
+        
+        <textarea name="mensagem" placeholder="Descreva o problema do seu computador (ex: Não liga, tela azul, lento...)" required></textarea>
+        
+        <button type="submit" class="btn">Enviar Pedido</button>
+    </form>
+</section>
 
     <footer>
         <p>&copy; 2026 RB Tech - Todos os direitos reservados.</p>
